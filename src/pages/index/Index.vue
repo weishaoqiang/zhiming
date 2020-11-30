@@ -88,7 +88,7 @@ export default {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 50px;
+        left: 200px;
         z-index: 2;
       }
     }

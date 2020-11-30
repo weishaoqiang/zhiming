@@ -4,7 +4,7 @@
       <div class="logo">
         <logo></logo>
       </div>
-      <div class="name">保卫处</div>
+      <div class="name">党委武装部（保卫处）</div>
     </div>
     <div class="right">
       <div class="email-link">
@@ -40,6 +40,7 @@ export default {
   .header {
     width: 100%;
     height: 150px;
+    padding: 0 120px;
     background-color: $mainColor;
     display: flex;
     justify-content: flex-start;
@@ -48,7 +49,6 @@ export default {
       flex: 1;
       display: flex;
       justify-content: flex-start;
-      padding-left: 20px;
 
       .name {
         position: relative;
@@ -57,7 +57,7 @@ export default {
         letter-spacing: 20px;
         &::before {
           content: "";
-          width: 4px;
+          width: 3px;
           height: 42px;
           position: absolute;
           left: -35px;
@@ -69,8 +69,8 @@ export default {
     }
     .right {
       background-color: transparent;
-      width: 440px;
-      padding: 30px 150px 20px 60px;
+      width: 210px;
+      padding: 30px 0px 20px 0px;
       .email-link {
         text-align: center;
         margin-bottom: 15px;

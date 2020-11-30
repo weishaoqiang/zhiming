@@ -53,15 +53,17 @@ export default {
         flex: 2;
       }
       .right {
-        flex: 1;
+        // flex: 1;
+        box-sizing: border-box;
+        width: 130px;
         background-color: $warnColor;
-        padding-left: 15px;
+        padding: 5px 15px;
         border-radius: 4px;
       }
       .tel {
         cursor: pointer;
-        height: 30px;
-        line-height: 30px;
+        height: 24px;
+        line-height: 24px;
         font-size: $fontSizeBig;
       }
     }

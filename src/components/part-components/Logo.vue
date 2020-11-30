@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <div class="img">
-      <img src="@/assets/images/logo.jpg" alt="logo">
+      <img src="@/assets/images/logo.gif" alt="logo">
     </div>
     <div class="title">
       <p class="zh">广西机电职业技术学院</p>

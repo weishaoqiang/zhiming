@@ -10,7 +10,7 @@ const registerPages = () => {
   fs.readdirSync(resolve('src/pages')).forEach(pageName => {
     registerObjects[pageName] = {
       entry: [`src/pages/${pageName}/index.js`],
-      filename: `src/pages/${pageName}/index.html`,
+      filename: `${pageName}.html`,
       template: 'src/index.html',
       // 当使用 title 选项时，template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
       title: '广西机电职业技术学院',
