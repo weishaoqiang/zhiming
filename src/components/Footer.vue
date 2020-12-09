@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <div class="right">
-      <p>All rights reserved. 2011</p>
-      <p>广西南宁市大学东路101号 学院办公室 版权所有</p>
+      <p>版权所有：广西机电职业技术学院党委武装部（保卫处）</p>
+      <p>地址：广西南宁市大学东路101号</p>
     </div>
   </div>
 </template>

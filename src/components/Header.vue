@@ -1,18 +1,20 @@
 <template>
   <div class="header">
-    <div class="left">
-      <div class="logo">
-        <logo></logo>
+    <div class="inner-header">
+      <div class="left">
+        <div class="logo">
+          <logo></logo>
+        </div>
+        <div class="name">党委武装部（保卫处）</div>
       </div>
-      <div class="name">党委武装部（保卫处）</div>
-    </div>
-    <div class="right">
-      <div class="email-link">
-        <a class="link" href="http://www.gxcme.edu.cn/">学院首页</a>
-        <a class="email" href="mailto:bwc@gxcme.edu.cn">部门邮箱</a>
-      </div>
-      <div class="search">
-        <el-input v-model="value" prefix-icon="el-icon-search" placeholder="请输要搜素的入内容" size="medium"></el-input>
+      <div class="right">
+        <div class="email-link">
+          <a class="link" href="http://www.gxcme.edu.cn/">学院首页</a>
+          <a class="email" href="mailto:bwc@gxcme.edu.cn">部门邮箱</a>
+        </div>
+        <div class="search">
+          <el-input v-model="value" prefix-icon="el-icon-search" placeholder="请输要搜素的入内容" size="medium"></el-input>
+        </div>
       </div>
     </div>
   </div>
@@ -38,10 +40,14 @@ export default {
 
 <style lang="scss" scoped>
   .header {
+    // background-color: $mainColor;
+    background: linear-gradient($darckBlueColor, $mainColor);
+  }
+  .inner-header {
+    max-width: 1366px;
     width: 100%;
     height: 150px;
-    padding: 0 120px;
-    background-color: $mainColor;
+    margin: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,12 +55,16 @@ export default {
       flex: 1;
       display: flex;
       justify-content: flex-start;
-
+      .logo {
+        width: 500px;
+      }
       .name {
         position: relative;
         font-size: $fontSizeLarge;
         font-weight: 600;
-        letter-spacing: 20px;
+        letter-spacing: 10px;
+        line-height: 80px;
+        color: $grayBGColor;
         &::before {
           content: "";
           width: 3px;
@@ -63,7 +73,7 @@ export default {
           left: -35px;
           top: 50%;
           transform: translateY(-50%);
-          background-color: $blackColor;
+          background-color: $grayBGColor;
         }
       }
     }
@@ -74,6 +84,7 @@ export default {
       .email-link {
         text-align: center;
         margin-bottom: 15px;
+        color: $grayBGColor;
         > a {
           margin-right: 20px;
           position: relative;
@@ -86,7 +97,7 @@ export default {
           transform: translateY(-50%);
           height: 12px;
           width: 1px;
-          background-color: $fontColor;
+          background-color: $grayBGColor;
         }
       }
     }

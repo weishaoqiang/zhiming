@@ -1,26 +1,10 @@
 <template>
   <div class="nav">
     <div class="nav-list">
-      <div class="nav-item">
-        <a href="/index.html">部门首页</a>
-      </div>
-      <div class="nav-item">
-        <a href="/department-duty.html">部门职责</a>
-      </div>
-      <div class="nav-item">
-        <a href="/department-new.html">部门新闻</a>
-      </div>
-      <div class="nav-item">
-        <a href="/department-notify.html">通知公告</a>
-      </div>
-      <div class="nav-item">
-        <a href="/department-rules.html">规章制度</a>
-      </div>
-      <div class="nav-item">
-        <a href="/department-draft.html">征兵工作</a>
-      </div>
-      <div class="nav-item">
-        <a href="/department-sheet.html">常用表格</a>
+      <div :class="['nav-item', {'active': false}]"
+        v-for="item in navData"
+        :key="item.id">
+        <a :href="item.link">{{item.name}}</a>
       </div>
     </div>
   </div>
@@ -30,10 +14,41 @@
 export default {
   name: 'Nav',
   data() {
-    return {}
+    return {
+      navData: [{
+        id: 1,
+        name: '部门首页',
+        link: '/index.html'
+      }, {
+        id: 2,
+        name: '机构设置',
+        link: '/department-duty.html'
+      }, {
+        id: 3,
+        name: '工作动态',
+        link: '/department-new.html'
+      }, {21
+        link: '/department-notify.html'
+      }, {
+        id: 5,
+        name: '武装工作',
+        link: '/department-notify.html'
+      }, {
+        id: 6,
+        name: '法政法规',
+        link: '/department-rules.html'
+      }, {
+        id: 7,
+        name: '政治学习',
+        link: '/department-draft.html'
+      }, {
+        id: 8,
+        name: '宣传教育',
+        link: '/department-sheet.html'
+      }]
+    }
   },
   mounted() {
-    console.log(window.location)
   }
 }
 </script>
@@ -65,7 +80,7 @@ export default {
         height: 100%;
       }
     }
-    .nav-item:hover {
+    .nav-item:hover, .nav-item.active {
       background-color: $mainColor;
       color: $whiteColor;
     }

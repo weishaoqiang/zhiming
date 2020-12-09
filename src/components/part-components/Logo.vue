@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <div class="component-logo">
     <div class="img">
       <img src="@/assets/images/logo.gif" alt="logo">
     </div>
@@ -20,12 +20,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .logo {
+  .component-logo {
     display: flex;
     justify-content: flex-start;
+    max-width: 500px;
+    overflow: hidden;
+    height: 80px;
   }
   .img {
-    width: 60px;
+    width: 80px;
     height: auto;
     img {
       display: block;
@@ -33,10 +36,11 @@ export default {
     }
   }
   .title {
-    height: 60px;
+    height: 80px;
     padding: 10px 0 0 10px;
+    color: $grayBGColor;
     .zh {
-      font-size: $fontSizeLogo;
+      font-size: $fontSizeLogo + 10;
       font-weight: 100;
       font-family: "gxcme";
     }
@@ -45,7 +49,6 @@ export default {
       -webkit-transform-origin-x: 0;
       -webkit-transform: scale(0.80);
       font-family: "Microsoft YaHei Light";
-      // color: ;
     }
   }
 </style>

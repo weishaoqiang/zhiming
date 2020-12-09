@@ -1,16 +1,15 @@
 <template>
-  <div class="components-plane">
+  <div class="component-plane">
     <div class="plane-head">
-      <h3 class="title">
+      <div :class="['more', { 'more_padding': !more }]">
+        <a :href="link">
+          <i  class="iconfont icon-more" title="更多"></i>
+        </a>
+      </div>
+      <h3 :class="['title', {'title-center': centerTitle }]">
         <i class="" v-if="icon"></i>
         <p>{{title}}</p>
       </h3>
-      <div class="more">
-        <a href="javascript:;">
-          <i class="iconfont icon-more"></i>
-          <!-- <span class="desc">更djksjdks多</span> -->
-        </a>
-      </div>
     </div>
     <div class="plane-content">
       <slot></slot>
@@ -26,7 +25,19 @@ export default {
       type: String,
       default: '标题'
     },
+    more: {
+      type: Boolean,
+      default: true
+    },
     icon: {
+      type: String,
+      default: ''
+    },
+    centerTitle: {
+      type: Boolean,
+      default: false
+    },
+    link: {
       type: String,
       default: ''
     }
@@ -38,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .components-plane {
+  .component-plane {
     width: 100%;
     background-color: $whiteColor;
     border-radius: 4px;
@@ -47,21 +58,46 @@ export default {
       height: 44px;
       line-height: 44px;
       position: relative;
-      display: flex;
-      justify-content: space-between;
       font-size: $fontSizeTitle;
       color: $darckBlueColor;
+      position: relative;
 
       .title {
-        // padding-left: 10px;
+        display: inline-block;
+        position: relative;
+        p {
+          position: relative;
+          &::after {
+          content: "";
+          position: absolute;
+          width: 70%;
+          bottom: -3px;
+          height: 3px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: $lightBlueColor;
+        }
+        }
+      }
+
+      .title-center {
+        margin: auto;
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
       }
 
       .more {
+        float: right;
         cursor: pointer;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-right: 18px;
+        &_padding {
+          padding-right: 12px;
+        }
         .iconfont {
           font-size: $fontSizeTitle;
         }
@@ -75,8 +111,9 @@ export default {
       position: absolute;
       bottom: -2px;
       left: 0;
-      height: 2px;
+      height: 1px;
       width: 100%;
+
       background: $lightBlueColor;
     }
     .plane-content {
