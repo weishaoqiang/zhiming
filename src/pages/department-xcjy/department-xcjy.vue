@@ -7,7 +7,7 @@
         <sub-nav :data="subNavData"></sub-nav>
       </div>
       <div class="right">
-        <Plane title="部门新闻">
+        <Plane title="宣传教育" :breadcrumb="true">
           <List :items="[1,2,3,4,5,6,7,8,9,10]"></List>
         </Plane>
         <div class="pagination">
@@ -32,17 +32,26 @@ import List from 'components/part-components/List.vue'
 import SubNav from 'components/SubNav.vue'
 
 export default {
-  name: 'department-duty',
+  name: 'department-jgsz',
   data() {
     return {
       subNavData: { 
-        title: '工作动态',
+        title: '宣传教育',
         navList: [{
           link: 'www.baidu.com',
-          text: '工作动态'
+          text: '宣传教育',
+          name: '宣传教育',
+          level: 2
         },{
           link: 'www.baidu.com',
-          text: '通知公告'
+          text: '安全常识',
+          name: '安全常识',
+          level: 2
+        },{
+          link: 'www.baidu.com',
+          text: '典型案例',
+          name: '典型案例',
+          level: 2
         }]
       }
     }
@@ -57,7 +66,7 @@ export default {
   .content {
     overflow: hidden;
     width: 1200px;
-    padding: 20px 20px 52px 20px;
+    padding: 20px 20px 30px 20px;
     min-height: calc(100vh - 280px);
     background-color: $whiteColor;
     margin: 0 auto;
@@ -69,18 +78,6 @@ export default {
     .right {
       flex: 1;
       position: relative;
-      .pagination {
-        position: absolute;
-        height: 32px;
-        bottom: 20px;
-        width: 100%;
-        .el-pagination {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          display: inline-block;
-        }
-      }
     }
   }
 </style>

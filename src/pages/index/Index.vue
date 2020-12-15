@@ -9,7 +9,7 @@
       </div>
       <div class="index-body">
         <div class="list dynamic">
-          <plane class="plane" title="工作·动态" :centerTitle="true" link="/department-new.html">
+          <plane class="plane" title="工作·动态" :centerTitle="true" link="/department-gzdt.html">
             <div class="item">
               <div class="pic-list">
                 <box-shadow v-for="i in 3" :key="i" class="pic-list_card">
@@ -27,13 +27,13 @@
           </plane>
         </div>
         <div class="list notify">
-          <plane class="plane" title="通知·公告" link="/department-duty.html">
+          <plane class="plane" title="通知·公告" link="/department-jgsz.html">
             <list :items="[1,2,3,4,5,6,7,8]"></list>
           </plane>
-          <plane class="plane" title="政策·法规" link="/department-rules.html">
+          <plane class="plane" title="政策·法规" link="/department-fzfg.html">
             <list :items="[1,2,3,4,5,6,7,8]"></list>
           </plane>
-          <plane class="plane" title="保卫·风采" link="/department-duty.html">
+          <plane class="plane" title="保卫·风采" link="/department-jgsz.html">
             <div class="pic-list">
               <box-shadow class="pic-list_card img-card" v-for="i in 4" :key="i">
                 <ImgCard

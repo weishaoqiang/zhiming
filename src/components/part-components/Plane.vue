@@ -1,7 +1,10 @@
 <template>
   <div class="component-plane">
     <div class="plane-head">
-      <div :class="['more', { 'more_padding': !more }]">
+      <div class="" v-if="breadcrumb">
+        <Breadcrumb />
+      </div>
+      <div v-else :class="['more', { 'more_padding': !more }]">
         <a :href="link">
           <i  class="iconfont icon-more" title="更多"></i>
         </a>
@@ -18,6 +21,7 @@
 </template>
 
 <script>
+import Breadcrumb from './Breadcrumb'
 export default {
   name: 'Plane',
   props: {
@@ -40,7 +44,14 @@ export default {
     link: {
       type: String,
       default: ''
+    },
+    breadcrumb: {
+      type: Boolean,
+      default: false
     }
+  },
+  components: {
+    Breadcrumb
   },
   data() {
     return {}

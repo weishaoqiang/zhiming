@@ -1,4 +1,4 @@
-import App from './department-notify.vue'
+import App from './department-fwdt.vue'
 import Vue from '@/lib/common'
 
 new Vue({

@@ -2,7 +2,7 @@
   <div class="component-sub-nav">
     <div class="title">{{data.title}}</div>
     <div class="text-list">
-      <a :href="item.link" v-for="(item, index) in data.navList" class="item-nav" :key="index">{{item.text}}</a>
+      <a :href="item.link" v-for="(item, index) in data.navList" :class="['item-nav', { 'item-nav_active': index === 0 }]" :key="index">{{item.text}}</a>
     </div>
   </div>
 </template>
@@ -48,6 +48,10 @@ export default {
         &:hover {
          background: rgba(57, 110, 186, 0.5);
          color: $whiteColor;
+        }
+        &_active {
+          background: rgba(57, 110, 186, 0.5);
+          color: $whiteColor;
         }
       }
     }

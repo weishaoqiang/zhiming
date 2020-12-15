@@ -34,3 +34,14 @@ div {
   // background-color: $contentBackground;
   min-height: 100vh;
 }
+
+.pagination {
+  height: 32px;
+  margin-top: 10px;
+  .el-pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+  }
+}

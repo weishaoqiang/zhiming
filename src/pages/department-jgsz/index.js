@@ -1,4 +1,4 @@
-import App from './department-rules.vue'
+import App from './department-jgsz'
 import Vue from '@/lib/common'
 
 new Vue({

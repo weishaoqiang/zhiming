@@ -7,7 +7,7 @@
         <sub-nav :data="subNavData"></sub-nav>
       </div>
       <div class="right">
-        <Plane title="部门职责">
+        <Plane title="服务大厅" :breadcrumb="true">
           <List :items="[1,2,3,4,5,6,7,8,9,10,11,12,13]"></List>
         </Plane>
         <div class="pagination">
@@ -32,29 +32,43 @@ import List from 'components/part-components/List.vue'
 import SubNav from 'components/SubNav.vue'
 
 export default {
-  name: 'department-duty',
+  name: 'department-jgsz',
   data() {
     return {
       subNavData: { 
-        title: '机构设置',
+        title: '服务大厅',
+        level: 1,
         navList: [{
           link: 'www.baidu.com',
-          text: '处室职责'
+          text: '消防审批',
+          name: '消防审批',
+          level: 2
         },{
           link: 'www.baidu.com',
-          text: '科室职责'
+          text: '车辆管理',
+          name: '车辆管理',
+          level: 2
         },{
           link: 'www.baidu.com',
-          text: '保卫风采'
+          text: '活动审批',
+          name: '活动审批',
+          level: 2
+        },{
+          link: 'www.baidu.com',
+          text: '户证管理',
+          name: '户证管理',
+          level: 2
+        },{
+          link: 'www.baidu.com',
+          text: '暂住人口',
+          name: '暂住人口',
+          level: 2
         }]
       }
     }
   },
   components: {
     Header, Nav, Footer, Plane, List, SubNav
-  },
-  mounted() {
-    console.log(window);
   }
 }
 </script>
@@ -63,7 +77,7 @@ export default {
   .content {
     overflow: hidden;
     width: 1200px;
-    padding: 20px 20px 52px 20px;
+    padding: 20px 20px 30px 20px;
     min-height: calc(100vh - 280px);
     background-color: $whiteColor;
     margin: 0 auto;
@@ -75,18 +89,6 @@ export default {
     .right {
       flex: 1;
       position: relative;
-      .pagination {
-        position: absolute;
-        height: 32px;
-        bottom: 20px;
-        width: 100%;
-        .el-pagination {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          display: inline-block;
-        }
-      }
     }
   }
 </style>

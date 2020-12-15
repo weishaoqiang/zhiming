@@ -1,4 +1,4 @@
-import App from './department-duty.vue'
+import App from './department-fzfg.vue'
 import Vue from '@/lib/common'
 
 new Vue({
