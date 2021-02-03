@@ -30,6 +30,7 @@ import Footer from 'components/Footer.vue'
 import Plane from 'components/part-components/Plane.vue'
 import List from 'components/part-components/List.vue'
 import SubNav from 'components/SubNav.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'department-jgsz',
@@ -49,6 +50,14 @@ export default {
   },
   components: {
     Header, Nav, Footer, Plane, List, SubNav
+  },
+  computed: {
+    ...mapState({
+      breadcrumb: state => state.breadcrumb
+    })
+  },
+  mounted() {
+    console.log(this.breadcrumb)
   }
 }
 </script>

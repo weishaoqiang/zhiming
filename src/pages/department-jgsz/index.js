@@ -1,6 +1,6 @@
 import App from './department-jgsz'
-import Vue from '@/lib/common'
+import registerVue from '@/lib/common'
 
-new Vue({
-  render: h => h(App),
+registerVue({
+  render: h => h(App)
 }).$mount('#app')

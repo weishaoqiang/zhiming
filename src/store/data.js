@@ -1,5 +1,5 @@
 export const state = {
-  breadcrumb: []
+  breadcrumb: [1,2,3,4,5]
 }
 
 export const getters = {

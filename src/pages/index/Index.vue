@@ -103,6 +103,7 @@ import Plane from 'components/part-components/Plane.vue'
 import List from 'components/part-components/List.vue'
 import BoxShadow from 'components/part-components/BoxShadow.vue'
 import ImgCard from 'components/part-components/ImgCard.vue'
+import { mapState } from 'vuex'
 
 export default {
   data() {
@@ -114,8 +115,16 @@ export default {
       }]
     }
   },
+  computed: {
+    ...mapState({
+      breadcrumb: state => state.breadcrumb
+    })
+  },
   components: {
     Header, Nav, Footer, Banner, ContactCard, Plane, List, BoxShadow, ImgCard
+  },
+  mounted() {
+    console.log(this.breadcrumb);
   }
 }
 </script>
